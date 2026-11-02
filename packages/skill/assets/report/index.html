@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Claude Code 与 Codex 用户安装能力盘点</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">LOCAL TRACKER</p>
+        <h1>Claude Code 与 Codex 用户安装能力盘点</h1>
+        <p class="scope-copy">仅展示用户安装的 Skill、MCP 和 CLI，不包含客户端原生能力。</p>
+        <p id="coverage">正在读取可观测范围...</p>
+      </div>
+      <div class="window-indicator" aria-label="统计窗口">
+        <span>统计窗口</span>
+        <strong id="window-label">读取中</strong>
+        <small>生成报告时确定</small>
+      </div>
+    </header>
+
+    <main>
+      <section id="summary" class="summary" aria-label="Summary"></section>
+
+      <section>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">USAGE TIERS</p>
+            <h2>使用分级</h2>
+          </div>
+          <div class="filters">
+            <select id="type-filter" aria-label="Capability type">
+              <option value="all">全部类型</option>
+              <option value="skill">Skill</option>
+              <option value="mcp">MCP</option>
+              <option value="cli">CLI</option>
+            </select>
+            <select id="client-filter" aria-label="Client">
+              <option value="all">全部客户端</option>
+              <option value="codex">Codex</option>
+              <option value="claude">Claude</option>
+            </select>
+          </div>
+        </div>
+        <div id="usage-groups" class="usage-groups" aria-live="polite"></div>
+      </section>
+
+    </main>
+
+    <template id="capability-template">
+      <article class="capability">
+        <div class="capability-main">
+          <div class="badges"></div>
+          <h3></h3>
+          <p class="description"></p>
+          <dl></dl>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

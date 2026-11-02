@@ -1,0 +1,6 @@
+interface:
+  display_name: "Local Tracker"
+  short_description: "查询本地会话、用量和已安装工具"
+  default_prompt: "使用 $local-tracker-skill 查看我最近的 AI 会话、token 用量和已安装能力。"
+policy:
+  allow_implicit_invocation: true

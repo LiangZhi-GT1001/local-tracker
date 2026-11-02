@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-tracker"
+version = "0.10.0"
+description = "Track token usage and traces across local AI agents (Claude Code, Codex)"
+requires-python = ">=3.10"
+dependencies = [
+    "rich>=13.7",
+    "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.scripts]
+lt = "src.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["src*"]

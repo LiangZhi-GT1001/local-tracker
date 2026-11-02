@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.venv/
+venv/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local agent/workspace rules. Keep these private if they exist locally.
+AGENTS.md
+CLAUDE.md
+**/AGENTS.md
+**/CLAUDE.md
+!/AGENTS.md
+!/CLAUDE.md
+.claude/
+.codex/
+.agents/
+
+# Runtime outputs
+report-output/
+release/
+target/
+*.log
+*.tmp
+.traces/
+pricing_cache.json
+.playwright-mcp/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
