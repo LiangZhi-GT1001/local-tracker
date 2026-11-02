@@ -44,6 +44,23 @@ lt capabilities --limit 12 --sort uses
 - Skill 不导入 CLI Python 内部模块，不实现备用扫描器；如果 `lt` 不存在或命令失败，应提示安装或版本不兼容。
 - 需要脚本化、导出 JSON 或精确过滤时直接使用 CLI；需要对话式解释和静态报表时使用 Skill。
 
+## 主要命令
+
+| 命令 | 用途 | 示例 |
+|---|---|---|
+| `lt sessions` | 列出 session 及 token/cost，支持按项目、客户端、token 排序 | `lt sessions --sort tokens` |
+| `lt show` | 查看 session trace、轮次或指定内容（`--only user/assistant/thinking/tool-calls/usage/skills`） | `lt show --latest --only user` |
+| `lt watch` | 按间隔增量监听 session 的新增用户输入（`--history N` 可回看最近 N 条） | `lt watch --session <id> --interval 3` |
+| `lt analyze` | 分析 session 的工具、Skill 与 token 结构 | `lt analyze --latest` |
+| `lt usage` | 按日/周/月、日期范围、项目或客户端统计 token/cost | `lt usage --period daily` |
+| `lt capabilities` | 查看日志中检测到的 Skill/MCP/CLI/原生工具使用情况 | `lt capabilities --type skill --sort uses` |
+| `lt inventory` | 盘点已安装的 Skill、MCP、CLI | `lt inventory --format json` |
+| `lt audit` | 将安装清单与最近 7/30/90 天使用证据关联 | `lt audit --window 30d --format json` |
+| `lt capability` | 备份后禁用/恢复用户级能力（`disable`/`restore`/`backups`） | `lt capability backups --format json` |
+| `lt fields` | 查看公开输出字段定义 | `lt fields` |
+
+每个命令都支持 `lt <command> --help` 查看完整参数。
+
 ## 常见能力
 
 - 查询最近 session、项目 session 和单个 session 详情。

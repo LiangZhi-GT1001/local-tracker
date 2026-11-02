@@ -38,6 +38,7 @@ pip install -e . # 以 editable 模式安装当前项目
 |---|---|---|---|
 | `sessions` | 查找会话并比较 session 级 token/cost | `--client`、`--project`、`--sort`、`--limit`、`--format` | `lt sessions --client codex --sort tokens` |
 | `show` | 打开指定 session，查看 trace、轮次、turn 用量或工具调用 | `--session`、`--latest`、`--only`、`--turn`、`--format` | `lt show --latest --only turns` |
+| `watch` | 按间隔增量监听 session 的新增用户输入 | `--session`、`--latest`、`--interval`、`--history` | `lt watch --session <id> --interval 3` |
 | `analyze` | 分析 session 的工具、Skill 和 token 结构 | `--session`、`--latest`、`--client`、`--format` | `lt analyze --latest` |
 | `usage` | 按日期、周期、项目或客户端统计 token/cost | `--period`、`--from`、`--to`、`--client`、`--project`、`--sort` | `lt usage --from 2026-06-01 --to 2026-06-08` |
 | `capabilities` | 查看日志中检测到的 Skill、MCP、CLI 和原生工具使用情况 | `--type`、`--period`、`--client`、`--name`、`--sort`、`--required` | `lt capabilities --type skill --sort uses` |
