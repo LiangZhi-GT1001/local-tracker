@@ -99,6 +99,14 @@ tests/
 | [`packages/cli/docs/FIELDS.md`](packages/cli/docs/FIELDS.md) | CLI 公开字段词典。 |
 | [`packages/skill/SKILL.md`](packages/skill/SKILL.md) | Skill 的触发条件、执行顺序、命令路由和安全约束。 |
 
+## 本地开发
+
+```bash
+pip install -e packages/cli        # 开发态安装 CLI
+lt --help
+python3 -m pytest packages/cli/tests packages/skill/tests   # 运行测试
+```
+
 ## 验证
 
 ```bash
